@@ -1,6 +1,8 @@
-package com.example.myapplication;
+package com.example.myapplication.util;
 
 import android.app.Application;
+
+import com.example.myapplication.BuildConfig;
 
 import org.xutils.x;
 

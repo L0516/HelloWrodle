@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.adapter;
 
 import android.content.Context;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.R;
+import com.example.myapplication.bean.FoodBean;
 
 import java.util.List;
 
@@ -43,7 +45,7 @@ public class Base extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         Holder holder;
         if (convertView==null){
-            convertView = View.inflate(context,R.layout.bujv,null);
+            convertView = View.inflate(context, R.layout.bujv,null);
             holder = new Holder();
             holder.textView = (TextView) convertView.findViewById(R.id.textView2);
             holder.textView2 = (TextView) convertView.findViewById(R.id.textView3);
@@ -53,7 +55,7 @@ public class Base extends BaseAdapter {
             holder = (Holder) convertView.getTag();
         }
         holder.textView.setText(list.get(position).getName());
-        holder.textView2.setText("￥"+list.get(position).getFeatured_price());
+        holder.textView2.setText("￥"+list.get(position).getPrice());
         Glide.with(context).load(list.get(position).getApp_long_image2()).into(holder.imageView);
         return convertView;
     }

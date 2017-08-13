@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.bean;
 
 import java.util.List;
 

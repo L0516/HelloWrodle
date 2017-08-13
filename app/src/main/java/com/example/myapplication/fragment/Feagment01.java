@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +9,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.myapplication.adapter.Base;
+import com.example.myapplication.bean.FoodBean;
+import com.example.myapplication.R;
 import com.google.gson.Gson;
 
 import org.xutils.common.Callback;
@@ -48,6 +51,8 @@ public class Feagment01 extends Fragment {
                 }
                 ArrayAdapter adapter = new ArrayAdapter(getActivity(),android.R.layout.simple_expandable_list_item_1,list);
                 listView.setAdapter(adapter);
+                List<FoodBean.DataBean.CategoriesBean.ProductsBean> products = categories.get(0).getProducts();
+                listView2.setAdapter(new Base(getActivity(),products));
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

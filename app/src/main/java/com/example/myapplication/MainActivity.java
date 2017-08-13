@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 
 import com.bwie.tablayout.BaseFragmentActivity;
+import com.example.myapplication.fragment.Feagment01;
+import com.example.myapplication.fragment.Feagment02;
+import com.example.myapplication.fragment.Feagment03;
+import com.example.myapplication.fragment.Feagment04;
 
 public class MainActivity extends BaseFragmentActivity{
     @Override
@@ -29,7 +31,7 @@ public class MainActivity extends BaseFragmentActivity{
 
     @Override
     public int[] setimg() {
-        return new int[]{R.drawable.tab_home_s,R.drawable.tab_topic_s,R.drawable.main_index_cart_pressed,R.drawable.main_index_my_pressed};
+        return new int[]{R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4};
     }
 
     @Override

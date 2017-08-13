@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:id="@+id/f3_jiage"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="欢迎购买"
+            android:background="#696969"
+            android:textColor="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/f3_jiesuan"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:background="#ED2201"
+            android:textColor="#ffffff"
+            android:text="去结算(0)"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/f3_tishi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3"
+        app:srcCompat="@drawable/bg_feed_sub_empty_desc"
+        android:layout_above="@+id/f3_qvdenglu"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/f3_qvdenglu"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:text="去登陆→" />
+
+    <ListView
+        android:id="@+id/f3_listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
